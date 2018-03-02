@@ -1,0 +1,43 @@
+{
+  "name": "backend-insta-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "./node_modules/.bin/_mocha ./test/**/*.test.js || true",
+    "seeds:run": "./node_modules/.bin/knex --knexfile=./config/knexfile.js seed:run",
+    "seeds:make": "./node_modules/.bin/knex --knexfile=./config/knexfile.js seed:make",
+    "migrate:latest": "./node_modules/.bin/knex --knexfile=./config/knexfile.js migrate:latest",
+    "migrate:rollback": "knex --knexfile=./config/knexfile.js migrate:rollback",
+    "migrate:make": "./node_modules/.bin/knex --knexfile=./config/knexfile.js migrate:make"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.18.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.9.0",
+    "mocha": "^5.0.1",
+    "prettier": "^1.10.2"
+  },
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "busboy": "^0.2.14",
+    "dotenv": "^5.0.0",
+    "knex": "^0.14.4",
+    "koa": "^2.5.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-logger": "^3.1.0",
+    "koa-passport": "^4.0.1",
+    "koa-router": "^7.4.0",
+    "koa-session": "^5.8.1",
+    "passport-local": "^1.0.0",
+    "pg": "^7.4.1",
+    "redis": "^2.8.0",
+    "uuid": "^3.2.1",
+    "yup": "^0.24.1"
+  }
+}
